@@ -1,0 +1,20 @@
+/* PRESETS
+/––––––––––––––––––––––––*/
+
+.content-block {
+	//create the "container" with this applied to any row or any 100% width element
+	padding: 0 1rem;
+}
+
+.noscroll {
+	overflow: hidden;
+}
+
+:focus {
+	outline: 0;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
