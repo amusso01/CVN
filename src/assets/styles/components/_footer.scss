@@ -1,3 +1,93 @@
 footer.site-footer {
 	background-color: $color__footerBg;
+	padding: 40px 0 25px;
+
+	.footer-grid{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 20px;
+		padding-bottom: 10px;
+
+		@include media('<phone-land'){
+			grid-template-columns: 1fr;
+			row-gap: 40px;
+		}
+
+		@include media('<phone'){
+			margin-bottom: 25px;
+		}
+
+	}
+
+	.footer-logo-section{
+		>figure{
+			margin-bottom: 18px;
+		}
+		.info{
+			max-width: 400px;
+			p	{
+				color: #808F99;
+				font-size: 12px;
+				line-height: 15px;
+				span{
+					display: inline-block;
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+
+	.footer-menus{
+
+		display: flex;
+		justify-content: space-between;
+
+		@include media('<phone'){
+			flex-direction: column;
+			row-gap: 30px;
+		}
+
+		.blue-line{
+			width:21px;
+			height: 6px;
+			background-color: #279BD5;
+			margin-bottom: 35px;
+		}
+
+
+		.menu-item{
+			margin-bottom: 12px;
+
+			a{
+				font-size: 14px;
+				color: $color__main;
+				font-weight: 700;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.footer-nav-legal{
+			.menu-item{
+				a{
+					font-weight:500 ;
+				}
+			}
+		}
+
+	}
+
+	.copyright{
+		display: flex;
+		justify-content: flex-end;
+		p{
+			color: #808F99;
+			font-size: 12px;
+			line-height: 15px;
+		}
+	}
+
+	
+
 }

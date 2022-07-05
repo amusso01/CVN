@@ -50,6 +50,12 @@ sub {
 	bottom: -0.25em;
 }
 
+svg{
+	path{
+		transition: all 0.3s;
+	}
+}
+
 /**
  * Links
  */
@@ -57,6 +63,7 @@ a {
 	color: $color__link;
 	text-decoration: none;
 	font-size: $text__p;
+	transition: color, 0.3s;
 	&:hover {
 		color: $color__link-hover;
 	}

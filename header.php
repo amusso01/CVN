@@ -40,12 +40,18 @@ $displaySocial = get_theme_mod('display-social');
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'foundry' ); ?></a>
 	<header class="site-header">
 		<div class="site_header-account">
+			<div class="content-block">
+				<ul>
+					<?php  ?>
+					<li><a href=""><i><?php get_template_part('svg-template/svg', 'icon-user' ) ?></i>Login</a></li>
+					<li><a href="">Become a member</a></li>
+					<?php  ?>
+	
+					<?php  ?>
+				</ul>
+			<!-- <?php get_search_form(); ?> -->
 
-			<ul>
-				<li><a href=""><i><?php get_template_part('svg-template/svg', 'icon-user' ) ?></i></a></li>
-				<li><a href=""></a></li>
-			</ul>
-		<!-- <?php get_search_form(); ?> -->
+			</div>
 		</div>
 		<div class="site-header__inner content-block">
 			<?php get_template_part( 'components/header/logo' ); ?>
@@ -53,6 +59,6 @@ $displaySocial = get_theme_mod('display-social');
 			<?php get_template_part( 'components/header/hamburger' ); ?>
 		</div>
 	</header><!-- .site-header -->
-
+	<div id="menuOverlay" class="mobile-menu-overlay"></div>
 
 	<div id="content" class="site-content">

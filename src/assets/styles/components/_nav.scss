@@ -1,0 +1,154 @@
+.site_header-account{
+	padding: 15px 0;
+	background-color: $color__footerBg;
+	ul{
+		display: flex;
+		list-style: none;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+		>li{
+			margin-right: 30px;
+			&:last-of-type{
+				margin-right: 0;
+			}
+			a{
+				font-size: 14px;
+				font-weight: 600;
+				color: #808F99;
+				display: inline-flex;
+				align-items: center;
+				&:hover{
+					color: $color__link_hover;
+					svg{
+						path{
+							stroke: $color__link-hover;
+						}
+					}
+				}
+				i{
+					position: relative;
+					display: inline-block;
+					top: 3px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+
+.site-header__inner{
+	padding-top: 13px;
+	padding-bottom: 13px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	background-color: $color__bright;
+
+	@include media('<tablet'){
+		align-items: center;
+	}
+
+	.site-header__menu{
+		>ul{
+			position: absolute;
+			width: 85%;
+			max-width: 290px;
+			left: 0;
+			top: 0;
+			background-color: $color__footerBg;
+			height: 100vh;
+			padding: 50px 0 0 3rem ;
+			left: -290px;
+			transition: left 0.3s;
+
+			&.s-open{
+				left: 0;
+			}
+
+			@include media('>tablet'){
+				column-gap: 20px;
+				display: flex;
+				position: static;
+				width: 100%;
+				max-width: none;
+				background-color: transparent;
+				height: auto;
+			}
+
+			@include media('>desktop'){
+				column-gap: 30px;
+			}
+
+			.menu-item{
+				padding-bottom: 15px;
+
+				@include media('<tablet'){
+						padding-bottom: 23px;
+				}
+				&.current-menu-item{
+					position: relative;
+			
+					&:after{
+						@include pseudo;
+						bottom: -13px;
+						left: 0;
+						width: 100%;
+						height: 3px;
+						background-color: $color__link-hover;
+
+						@include media('<tablet'){
+							display: none;
+						}
+					}
+					>a{
+						color: $color__link-hover;
+					}
+				}
+				>a{
+					font-weight: 700;
+					color: $color__link;
+					text-transform: uppercase;
+					font-size: 14px;
+					@include media('>desktop'){
+						font-size: 15px;
+					}
+					&:hover{
+						color: $color__link-hover;
+					}
+				}
+			}
+		}
+
+	}
+
+	.site-header__hamburger{
+
+		position: relative;
+		z-index: 10;
+	
+		@include media('>tablet'){
+			display: none;
+		}
+	}
+}
+
+.mobile-menu-overlay{
+	position: absolute;
+	width: calc(100vw - 290px);
+	height: 100%;
+	left: -100vw;
+	background-color: $color__link-hover;
+	opacity: .6;
+	top: 0;
+	z-index: 9;
+	transition: left .3s ease-in-out;
+
+	&.s-open{
+		left: 290px;
+	}
+
+	@include media('>tablet'){
+		display: none;
+	}
+}

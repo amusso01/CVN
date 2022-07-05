@@ -3,7 +3,13 @@
 
 .content-block {
 	//create the "container" with this applied to any row or any 100% width element
-	padding: 0 1rem;
+	padding: 0 2rem;
+	max-width: 1560px;
+	width: 100%;
+	margin: auto;
+		@include media('>phone-land'){
+			padding: 0 4rem;
+		}
 }
 
 .noscroll {
