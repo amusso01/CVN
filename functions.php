@@ -33,6 +33,12 @@ require get_template_directory() . '/library/function-settings.php';
 require get_template_directory() . '/library/function-admin_display.php';
 
 /*==================================================================================
+  CPT
+==================================================================================*/
+// Admin Display and rename post
+require get_template_directory() . '/library/function-cpt.php';
+
+/*==================================================================================
   WIDGET AND SIDEBAR
 ==================================================================================*/
 // register widget and sidebar

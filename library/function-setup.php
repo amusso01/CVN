@@ -65,6 +65,6 @@ add_action( 'init', 'wpseed_register_theme_menus');
 
 $gFontUrl = "'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap'";
 $fontFamily = "'Open Sans', sans-serif";
-$customLogo = get_stylesheet_directory_uri()."/dist/images/foundry-logo.svg";
-$mainColor = "#ff0000";
+$customLogo = get_stylesheet_directory_uri()."/dist/images/CVN-logo.png";
+$mainColor = "#279BD5";
 
