@@ -16,30 +16,40 @@ get_header();
 ?>
 
 
-<main role="main" class=" main index-main">
+<main role="main" class=" main news-main">
+	<div class="content-block">
 
-<?php
-if ( have_posts() ) :?>
+		<?php get_template_part( 'components/news/featured-news' ); ?>
+	
+		<?php
+		if ( have_posts() ) :?>
 
-	<header>
-		<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-	</header>
+		<h2 class="latest-title" >Latest news</h2>
+		<section class="latest-news" >
 
-<?php
-	/* Start the Loop */
-	while ( have_posts() ) :
 
-		the_post();
-		get_template_part( 'template-parts/content', get_post_type() );
+			<?php
+				/* Start the Loop */
+				while ( have_posts() ) :
 
-	endwhile;
+					the_post();
+					get_template_part( 'components/news/latest-news' );
 
-else :
+				endwhile;
+			?>
+		</section>
+		<?php 
+		else :
 
-	get_template_part( 'template-parts/content', 'none' );
+			get_template_part( 'template-parts/content', 'none' );
 
-endif;
-?>
+		endif;
+		?>
+
+				
+
+
+	</div>
 
 </main><!-- #main -->
 

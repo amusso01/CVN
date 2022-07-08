@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="59" viewBox="0 0 60 59"><path data-name="Rectangle 20" fill="#f5f6f7" stroke="#ccd2d6" d="M59.5 58.5H.5V.5h59z"/><path data-name="Path 9" d="M31.513 37.002l-7.027-7.5 7.027-7.5" fill="none" stroke="#808f99" stroke-linecap="round" stroke-width="2"/></svg>
