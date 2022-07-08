@@ -1,0 +1,109 @@
+.site-main-single-event{
+  border-top: 1px solid #CCD2D6;
+} 
+
+.single-event-content{
+  padding-top: 73px;
+  padding-bottom: 93px;
+
+  .event-info{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .event-date.s-disabled{
+    opacity: 0.5;
+  }
+
+  .line-grey{
+    width: 100%;
+    height: 1px;
+    background-color:#CCD2D6 ;
+    margin: 100px 0 65px;
+  }
+
+  .event-title{
+    a{
+      font-size: 16px;
+      color: $color__link-hover;
+      font-family: $header__fontname;
+      letter-spacing: 0.6px;
+      margin-bottom: 20px;
+      display: inline-block;
+      font-weight: 900;
+    }
+    h4{
+      color: $color__main;
+      font-size: 36px;
+      line-height: 46px;
+      max-width: 800px;
+    }
+  }
+
+  .event-details{
+    display: flex;
+    justify-content: space-between;
+
+    .left{
+      max-width: 600px;
+      >ul{
+        margin-bottom: 50px;
+        display: flex;
+        list-style: none;
+        li{
+          color: $color__main;
+          font-weight: 700;
+
+        }
+        .title{
+          margin-right: 60px;
+          color: #279BD5;
+          font-family: $header__fontname;
+        }
+      }
+      >p{
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    .right{
+
+      .btn-register{
+        display: block;
+        background-color: $color__main;
+        color: $color__bright;
+        font-weight: 700;
+        margin-bottom: 51px;
+        padding: 8px 16px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &.s-disabled{
+          background-color: #CCD2D6;
+          pointer-events: none;
+        }
+
+      }
+
+      .share{
+        >p{
+          color:$color__main;
+          font-weight: 700;
+          margin-bottom: 14px;
+        }
+      }
+      .social{
+        display: flex;
+        column-gap: 10px;
+      }
+    }
+  }
+}
+
+.single-event-upcoming{
+  background-color: #F5F6F7;
+  padding-bottom: 95px;
+  padding-top:62px ;
+}
