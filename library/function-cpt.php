@@ -111,5 +111,82 @@
   // }
 
   // add_action( 'init', 'bml_create_book_taxonomies', 0 );
+
+
+  function bml_create_network_cpt() {
+
+    $labels = array(
+      'name' => _x( 'Network', 'post type general name', 'bymattlee' ),
+      'singular_name' => _x( 'Network', 'post type singular name', 'bymattlee' ),
+      'menu_name' => _x( 'Network', 'admin menu', 'bymattlee' ),
+      'name_admin_bar' => _x( 'Network', 'add new on admin bar', 'bymattlee' ),
+      'add_new' => _x( 'Add New', 'Network', 'bymattlee' ),
+      'add_new_item' => __( 'Add New Network', 'bymattlee' ),
+      'new_item' => __( 'New Network', 'bymattlee' ),
+      'edit_item' => __( 'Edit Network', 'bymattlee' ),
+      'view_item' => __( 'View Network', 'bymattlee' ),
+      'all_items' => __( 'All Network', 'bymattlee' ),
+      'search_items' => __( 'Search Network', 'bymattlee' ),
+      'parent_item_colon' => __( 'Parent Network:', 'bymattlee' ),
+      'not_found' => __( 'No Network found.', 'bymattlee' ),
+      'not_found_in_trash' => __( 'No Network found in Trash.', 'bymattlee' )
+    );
+
+    $args = array(
+      'labels' => $labels,
+      'description' => __( 'Description.', 'bymattlee' ),
+      'public' => true,
+      'publicly_queryable' => true,
+      'show_ui' => true,
+      'show_in_menu' => true,
+      'query_var' => true,
+      'rewrite' => array( 'slug' => 'Network-archive' ),
+      'capability_type' => 'post',
+      'has_archive' => true,
+      'hierarchical' => true,
+      'menu_position' => null,
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-admin-post',
+      'supports' => array( 'title', 'editor' )
+    );
+
+    register_post_type( 'bml-network', $args );
+
+  }
+
+  add_action( 'init', 'bml_create_network_cpt' );
+
+
+  function bml_create_network_taxonomies() {
+    
+    // Add new taxonomy, make it hierarchical (like categories)
+    $labels = array(
+      'name' => _x( 'Alphabetical', 'taxonomy general name', 'bymattlee' ),
+      'singular_name' => _x( 'Alphabetical', 'taxonomy singular name', 'bymattlee' ),
+      'search_items' => __( 'Search Alphabetical', 'bymattlee' ),
+      'all_items' => __( 'All Alphabetical', 'bymattlee' ),
+      'parent_item' => __( 'Parent Alphabetical', 'bymattlee' ),
+      'parent_item_colon' => __( 'Parent Alphabetical:', 'bymattlee' ),
+      'edit_item' => __( 'Edit Alphabetical', 'bymattlee' ),
+      'update_item' => __( 'Update Alphabetical', 'bymattlee' ),
+      'add_new_item' => __( 'Add New Alphabetical', 'bymattlee' ),
+      'new_item_name' => __( 'New Alphabetical Name', 'bymattlee' ),
+      'menu_name' => __( 'Alphabetical', 'bymattlee' ),
+    );
+
+    $args = array(
+      'hierarchical' => true,
+      'labels' => $labels,
+      'show_ui' => true,
+      'show_admin_column' => true,
+      'show_in_rest' => true,
+      'query_var' => true,
+      'rewrite' => array( 'slug' => 'alphabetical' ),
+    );
+
+    register_taxonomy( 'bml-alphabetical', array( 'bml-network' ), $args );
+  }
+
+  add_action( 'init', 'bml_create_network_taxonomies', 0 );
   
 ?>

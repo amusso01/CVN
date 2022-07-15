@@ -1,0 +1,147 @@
+.page-guidelines{
+  padding-top: 52px;
+
+  .selector{
+
+    >ul{
+      list-style: none;
+      display: flex;
+
+      >li{
+        padding: 42px 36px 40px;
+        position: relative;
+        font-size: 36px;
+        color: #808F99;
+        font-family: $header__fontname;
+        cursor: pointer;
+        font-weight: 500;
+
+        &::after{
+          @include pseudo;
+          background-color: #CCD2D6;
+          height: 3px;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+        }
+
+        &.s-active{
+          background-color: #F5F6F7;
+          color: #272766;
+
+          &::after{
+            background-color: #1B75BB;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+section.gr-content{
+  display: none;
+
+  &.s-active{
+    display: block;
+  }
+}
+
+.page-gr-content{
+  background-color: #F5F6F7;
+  padding: 70px 0;
+
+  .content-block__small{
+    max-width: 1148px;
+  }
+
+  .single-gr{
+    padding: 60px 0;
+    border-bottom: 1px solid #CCD2D6;
+  
+
+    >h2{
+      color: #272766;
+    }
+
+    .single-download{
+      background-color: $color__bright;
+      border-radius: 13px;
+      border: 1px solid #CCD2D6;
+      margin-top: 36px;
+      padding: 40px;
+      display: flex;
+      column-gap: 20px;
+      row-gap: 25px;
+      justify-content: space-between;
+
+      .info{
+        max-width: 590px;
+        
+        >h4{
+          font-size: 22px;
+          color: #272766;
+          margin-bottom: 16px;
+        }
+
+        >p{
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      >a{
+        display: block;
+        align-self: flex-end;
+        padding: 12px 40px;
+        background-color: #2A3890;
+        color: $color__bright;
+        font-weight: 700;
+        transition: .3s;
+
+        &:hover{
+          background-color: $color__link-hover;
+
+        }
+      }
+
+    }
+
+    .u-rich-text{
+      margin-top: 16px;
+      max-width: 590px;
+    }
+  }
+
+  .gr-footer{
+    margin-top: 60px;
+    margin-bottom: 50px;
+    padding: 100px;
+    background: transparent linear-gradient(115deg, #272766 0%, #10103B 100%) 0% 0% no-repeat padding-box;
+  
+    >p{
+      margin-bottom: 36px;
+      color: $color__bright;
+      line-height: 28px;
+      a{
+        font-weight: 700;
+        color: $color__bright;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    >a{
+      color: $color__bright;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}

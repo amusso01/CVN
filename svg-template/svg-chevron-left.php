@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.473" height="17.229" viewBox="0 0 10.473 17.229"><path data-name="Path 36" d="M9.816 15.59L2.66 8.21 9.56.59" fill="none" stroke="#279bd5" stroke-width="3"/></svg>

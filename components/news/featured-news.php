@@ -17,7 +17,7 @@ $featuredNews = get_field('featured_news' , $pageId);
               <div class="header">
                 <h4><?php echo $news->post_title ?></h4>
                 <p><?php echo $news->post_excerpt  ?></p>
-                <a href="<?php ?>" class="btn">READ MORE</a>
+                <a href="<?php echo get_the_permalink( $news->ID) ?>" class="btn">READ MORE</a>
               </div>
             </div>
             <figure class="figure" ><img class="lazyload" data-sizes="auto" data-srcset="<?php bml_the_image_srcset(get_post_thumbnail_id($news->ID)) ?>" alt="<?php echo $news->post_title ?>"></figure>
