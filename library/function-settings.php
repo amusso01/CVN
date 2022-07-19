@@ -322,3 +322,6 @@ function custom_excerpt_length( $length ) {
 	return 23;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// REMOVE archive title prefix
+add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );

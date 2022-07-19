@@ -143,6 +143,7 @@
       'rewrite' => array( 'slug' => 'Network-archive' ),
       'capability_type' => 'post',
       'has_archive' => true,
+      'taxonomies' => array('bml-alphabetical'),
       'hierarchical' => true,
       'menu_position' => null,
       'show_in_rest' => true,

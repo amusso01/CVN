@@ -1,19 +1,11 @@
-.site-main-single-event{
+.site-main-single-network{
   border-top: 1px solid #CCD2D6;
 } 
 
-.single-event-content{
+.single-network-content{
   padding-top: 73px;
   padding-bottom: 93px;
 
-  .event-info{
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .event-date.s-disabled{
-    opacity: 0.5;
-  }
 
   .line-grey{
     width: 100%;
@@ -22,7 +14,7 @@
     margin: 100px 0 65px;
   }
 
-  .event-title{
+  .network-title{
     a{
       font-size: 16px;
       color: $color__link-hover;
@@ -40,36 +32,61 @@
     }
   }
 
-  .event-details{
-    display: flex;
-    justify-content: space-between;
+  .network-details{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 30px;
 
-    .left{
-      max-width: 600px;
-      >ul{
-        margin-bottom: 50px;
-        display: flex;
-        list-style: none;
-        li{
-          color: $color__main;
-          font-weight: 700;
-
-        }
-        .title{
-          margin-right: 60px;
-          color: #279BD5;
-          font-family: $header__fontname;
-        }
-      }
-      >p{
+    .location, .contact, .address, .telephone-fax, .what-we-do, .staff{
+      margin-bottom: 50px;
+      p{
         font-size: 16px;
         line-height: 26px;
       }
     }
 
+    .full{
+      grid-column: 1 /3;
+    }
+
+    .hBlue{
+      margin-bottom: 8px;
+      color: #279BD5;
+      font-family: $header__fontname;
+    }
+
+    .contact{
+      a{
+        font-weight: 700;
+      }
+    }
+
+    .staff-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 50px;
+      row-gap: 50px;
+      .name{
+        font-family: $header__fontname;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 3px;
+      }
+      .role{
+        font-size: 18px;
+        margin-bottom: 3px;
+      }
+      .email a{
+        font-weight: 700;
+      }
+    }
+
     .right{
 
-      .btn-register{
+      justify-self: end;
+      .btn-visit{
         display: block;
         background-color: #2A3890;
         color: $color__bright;
@@ -79,16 +96,12 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        width: 100%;
+        max-width: 220px;
 
         &:hover{
           background-color: $color__link-hover;
         }
-
-        &.s-disabled{
-          background-color: #CCD2D6;
-          pointer-events: none;
-        }
-
       }
 
       .share{
@@ -96,6 +109,7 @@
           color:$color__main;
           font-weight: 700;
           margin-bottom: 14px;
+          text-align: right;
         }
       }
       .social{
@@ -104,10 +118,4 @@
       }
     }
   }
-}
-
-.single-event-upcoming{
-  background-color: #F5F6F7;
-  padding-bottom: 95px;
-  padding-top:62px ;
 }

@@ -1,0 +1,18 @@
+.network-navigation{
+  background-color: #272766;
+  padding: 35px 0;
+  ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    li{
+      a{
+        font-weight: 500;
+        font-size: 22px;
+        color: $color__bright;
+        font-family: $header__fontname;
+      }
+    }
+  }
+}

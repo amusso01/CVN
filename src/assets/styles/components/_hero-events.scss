@@ -30,6 +30,9 @@
     font-weight: 400;
     max-width: 50%;
     line-height: 64px;
+    &.wide{
+      max-width: 100%;
+    }
   }
 }
 

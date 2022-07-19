@@ -8,6 +8,9 @@
  */
 
 get_header();
+
+get_template_part( 'components/network/hero' );
+get_template_part( 'components/network/navigation' );
 ?>
 
 
