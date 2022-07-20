@@ -1,6 +1,7 @@
 import smoothscroll from "smoothscroll-polyfill";
 import hamburger from "./../part/hamburger";
 import tabNavigation from "../part/tabNavigation";
+import modal from "../part/modal";
 
 
 import Glide from '@glidejs/glide'
@@ -31,11 +32,16 @@ export default {
 			new Glide('.glide-featured-news').mount()
 		} 
 
-		tabNavigation()
+		// MODAL 
+		const modalEl = document.getElementById("jsModal");
+		if(typeof(modalEl) != 'undefined' && modalEl != null){
+			modal()
+		} 
+
 		// TAB GUIDELINES
 		const guidelines = document.getElementById("guidelinesTab");
 		if(typeof(guidelines) != 'undefined' && guidelines != null){
-			
+			tabNavigation()
 		}
 
 	},

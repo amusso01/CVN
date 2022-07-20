@@ -1,0 +1,26 @@
+.contact-content{
+  padding: 75px 0;
+  max-width: 1070px;
+  margin: auto;
+
+  .forminator-textarea{
+    border-radius: 13px!important;
+    border: 1px solid#CCD2D6!important;
+  }
+
+  .forminator-input {
+     border-color:#CCD2D6!important;
+  }
+
+  .forminator-row-last{
+    .forminator-field{
+      text-align: right!important;
+      .forminator-button{
+        >span{
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+}

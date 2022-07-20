@@ -13,27 +13,30 @@
  */
 
 get_header();
+
+get_template_part( 'components/page/contact-hero' );
+
 ?>
 
 <main role="main" class="site-main page-main">
+	<div class="content-block">
+
 <?php
 
-if ( have_posts() ) :
-	while ( have_posts() ) :
-		the_post();
+
+
+	if(is_page('contact')){
+		
+		get_template_part( 'template-parts/content', 'contact' );
+
+	}else{
 
 		get_template_part( 'template-parts/content', 'page' );
 
+	};
 
-	endwhile; // End of the loop.
-
-else :
-
-	get_template_part( 'template-parts/content', 'none' );
-
-endif;
 ?>
-
+	</div>
 </main><!-- #main -->
 
 

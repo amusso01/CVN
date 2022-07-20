@@ -4,6 +4,7 @@
   ** ***** Events Custom Post Type (example)
   ** ***** ----------------------------------------------- ***** */
 
+  // EVENTS
   // Create custom post type
   function bml_create_book_cpt() {
 
@@ -48,71 +49,9 @@
 
   add_action( 'init', 'bml_create_book_cpt' );
 
-  // function bml_create_book_taxonomies() {
-    
-  //   // Add new taxonomy, make it hierarchical (like categories)
-  //   $labels = array(
-  //     'name' => _x( 'Date', 'taxonomy general name', 'bymattlee' ),
-  //     'singular_name' => _x( 'Date', 'taxonomy singular name', 'bymattlee' ),
-  //     'search_items' => __( 'Search Date', 'bymattlee' ),
-  //     'all_items' => __( 'All Date', 'bymattlee' ),
-  //     'parent_item' => __( 'Parent Date', 'bymattlee' ),
-  //     'parent_item_colon' => __( 'Parent Date:', 'bymattlee' ),
-  //     'edit_item' => __( 'Edit Date', 'bymattlee' ),
-  //     'update_item' => __( 'Update Date', 'bymattlee' ),
-  //     'add_new_item' => __( 'Add New Date', 'bymattlee' ),
-  //     'new_item_name' => __( 'New Date Name', 'bymattlee' ),
-  //     'menu_name' => __( 'Date', 'bymattlee' ),
-  //   );
-
-  //   $args = array(
-  //     'hierarchical' => true,
-  //     'labels' => $labels,
-  //     'show_ui' => true,
-  //     'show_admin_column' => true,
-  //     'query_var' => true,
-  //     'rewrite' => array( 'slug' => 'date' ),
-  //   );
-
-  //   register_taxonomy( 'bml-date', array( 'bml-events' ), $args );
-  // }
-
-  //   // Add new taxonomy, NOT hierarchical (like tags)
-  //   $labels = array(
-  //     'name' => _x( 'Writers', 'taxonomy general name', 'bymattlee' ),
-  //     'singular_name' => _x( 'Writer', 'taxonomy singular name', 'bymattlee' ),
-  //     'search_items' => __( 'Search Writers', 'bymattlee' ),
-  //     'popular_items' => __( 'Popular Writers', 'bymattlee' ),
-  //     'all_items' => __( 'All Writers', 'bymattlee' ),
-  //     'parent_item' => null,
-  //     'parent_item_colon' => null,
-  //     'edit_item' => __( 'Edit Writer', 'bymattlee' ),
-  //     'update_item' => __( 'Update Writer', 'bymattlee' ),
-  //     'add_new_item' => __( 'Add New Writer', 'bymattlee' ),
-  //     'new_item_name' => __( 'New Writer Name', 'bymattlee' ),
-  //     'separate_items_with_commas' => __( 'Separate writers with commas', 'bymattlee' ),
-  //     'add_or_remove_items' => __( 'Add or remove writers', 'bymattlee' ),
-  //     'choose_from_most_used' => __( 'Choose from the most used writers', 'bymattlee' ),
-  //     'not_found' => __( 'No writers found.', 'bymattlee' ),
-  //     'menu_name' => __( 'Writers', 'bymattlee' ),
-  //   );
-
-  //   $args = array(
-  //     'hierarchical' => false,
-  //     'labels' => $labels,
-  //     'show_ui' => true,
-  //     'show_admin_column' => true,
-  //     'update_count_callback' => '_update_post_term_count',
-  //     'query_var' => true,
-  //     'rewrite' => array( 'slug' => 'writer' ),
-  //   );
-
-  //   register_taxonomy( 'bml-writer', 'bml-book', $args );
-  // }
-
-  // add_action( 'init', 'bml_create_book_taxonomies', 0 );
 
 
+// NETWORK
   function bml_create_network_cpt() {
 
     $labels = array(
@@ -189,5 +128,51 @@
   }
 
   add_action( 'init', 'bml_create_network_taxonomies', 0 );
+
+
+  // PARTNERS
+  function bml_create_partners_cpt() {
+
+    $labels = array(
+      'name' => _x( 'Partners', 'post type general name', 'bymattlee' ),
+      'singular_name' => _x( 'Partner', 'post type singular name', 'bymattlee' ),
+      'menu_name' => _x( 'Partners', 'admin menu', 'bymattlee' ),
+      'name_admin_bar' => _x( 'Partners', 'add new on admin bar', 'bymattlee' ),
+      'add_new' => _x( 'Add New', 'partners', 'bymattlee' ),
+      'add_new_item' => __( 'Add New Partner', 'bymattlee' ),
+      'new_item' => __( 'New Partners', 'bymattlee' ),
+      'edit_item' => __( 'Edit Partners', 'bymattlee' ),
+      'view_item' => __( 'View Partners', 'bymattlee' ),
+      'all_items' => __( 'All Partners', 'bymattlee' ),
+      'search_items' => __( 'Search Partners', 'bymattlee' ),
+      'parent_item_colon' => __( 'Parent Partners:', 'bymattlee' ),
+      'not_found' => __( 'No Partners found.', 'bymattlee' ),
+      'not_found_in_trash' => __( 'No Partners found in Trash.', 'bymattlee' )
+    );
+
+    $args = array(
+      'labels' => $labels,
+      'description' => __( 'Description.', 'bymattlee' ),
+      'public' => true,
+      'publicly_queryable' => true,
+      'show_ui' => true,
+      'show_in_menu' => true,
+      'query_var' => true,
+      'rewrite' => array( 'slug' => 'partners-archive' ),
+      'capability_type' => 'post',
+      'has_archive' => true,
+      'hierarchical' => true,
+      'menu_position' => null,
+      'show_in_rest' => true,
+      'menu_icon' => 'dashicons-admin-post',
+      'supports' => array( 'title', 'editor', 'thumbnail' )
+    );
+
+    register_post_type( 'bml-partners', $args );
+
+  }
+
+
+  add_action( 'init', 'bml_create_partners_cpt' );
   
 ?>
