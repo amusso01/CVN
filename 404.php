@@ -12,15 +12,14 @@ get_header(); ?>
 
 <main class="main main-error" role="main">
 
-	<section class="section" id="section-error-page">
+	<section class="section content-block" id="section-error-page">
 
 		<h1 class="page-title error-title"><?php esc_html_e( 'Content Cannot Be Found', 'foundry' ); ?></h1>
 
 		<div class="page-body error-body">
 
-			<p><?php esc_html_e( 'Unfortunately the content you were looking for could not be found. Please check that the URL is correct or do a search using the form below.', 'foundry' ); ?></p>
+			<p><?php esc_html_e( 'Unfortunately the content you were looking for could not be found. Please check that the URL is correct.', 'foundry' ); ?></p>
 
-			<?php get_search_form(); ?>
 
 		</div>
 

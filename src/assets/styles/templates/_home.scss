@@ -1,0 +1,153 @@
+.hero-bg-home{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 60px;
+
+  .text{
+    background-color: #272766;
+    padding: 94px 78px 111px;
+    h2{
+      color: $color__bright;
+      margin-bottom: 60px;
+      font-size: 36px;
+      line-height: 46px;
+    }
+
+    .cta{
+      display: flex;
+      align-items: center;
+
+      .btn{
+        padding: 20px;
+        &:first-of-type{
+          background-color: #279BD5;
+          margin-right: 16px;
+
+          &:hover{
+            background-color: $color__link;
+          }
+        }
+
+        &:last-of-type{
+          background-color: transparent;
+          border: 1px solid $color__bright;
+          &:hover{
+            background-color: $color__link;
+          }
+        }
+      }
+
+    }
+  }
+
+  .bg{
+    .figure{
+      height: 100%;
+    }
+  }
+}
+
+
+.home-top-card{
+  margin-bottom: 70px;
+  .top-card-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+    column-gap: 32px;
+  }
+
+  .single-card{
+    border: 1px solid #CCD2D6;
+    border-radius: 13px;
+
+    >h4{
+      padding: 12px 22px;
+      font-size: 24px;
+
+    }
+  }
+
+  .figure{
+    height: 350px;
+    img{
+      border-top-left-radius: 13px;
+      border-top-right-radius: 13px;
+    }
+  }
+
+}
+
+.upcoming-home{
+  background-color: #F5F6F7;
+  padding: 65px 0 73px;
+}
+
+
+.partners-home{
+  background: transparent linear-gradient(126deg, #272766 0%, #10103B 100%) 0% 0% no-repeat padding-box;
+  padding: 70px 0 85px;
+
+  h3{
+    color: $color__bright;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .grid-partners{
+    display: grid;
+    margin-top: 27px;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+
+    .figure-container{
+      width: 200px;
+      height: 112px;
+      background-color: $color__bright ;
+      border: 1px solid #CCD2D6;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+    }
+
+
+    .figure{
+      height:74px;
+      width: 180px;
+      >img{
+        object-fit: contain;
+      }
+    }
+
+  }
+}
+
+.home-latest-news{
+  padding-top: 70px;
+  padding-bottom: 120px;
+  h3{
+    color: #272766;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 46px;
+    margin-bottom: 36px;
+  }
+
+  .grid-latest{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 32px;
+    row-gap: 60px;
+
+    .latest-single-news{
+      .figure{
+        width: 400px;
+        height: 275px;
+      }
+    }
+  }
+}

@@ -26,7 +26,11 @@ $children = new WP_Query($args);
 
 
   <section class="events-upcoming">
-    <h3>Upcoming events</h3>
+    <?php if(is_front_page()) : ?>
+    <h3>Upcoming Events and Conferences</h3>
+    <?php else :  ?>
+    <h3>Upcoming Events</h3>
+    <?php endif; ?>
     <div class="events-grid">
 
     <?php while ($children->have_posts()) : $children->the_post(); $fields = (object) get_fields(); ?>
