@@ -1,0 +1,87 @@
+.bbp-form{
+  border: none!important;
+  margin-top: 60px;
+
+  .bbp-template-notice{
+    border-radius: 13px;
+    background-color: #E4F3FA;
+    border-color: transparent;
+
+    >ul{
+      list-style: none;
+    }
+  }
+
+  .bbp-username, .bbp-password, .bbp-email{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    margin-bottom: 20px;
+
+    input{
+      border: 1px solid #CCD2D6 ;
+      border-radius: 13px;
+      min-height: 54px!important;
+    }
+  }
+
+  .bbp-username{
+
+    >p{
+      display: flex;
+      flex-direction: column;
+      row-gap: 7px;
+      margin-bottom: 20px;
+
+      label{
+        width: 100%;
+      }
+    }
+  }
+
+  .bbp-remember-me{
+    margin-bottom: 25px;
+
+    label{
+      font-size: 15px;
+      color: #808F99;
+    }
+  }
+
+  .bbp-submit-wrapper{
+    text-align: left!important;
+    width: 100%;
+
+    .submit{
+      border: none;
+      padding-left: 10px;
+      padding-right: 10px;
+      @extend .btn;
+    }
+
+  }
+}
+
+.bbp-author-avatar { 
+  display: none ! important; 
+}
+
+.bbp-topic-freshness-author  .bbp-author-avatar { 
+  display: none ! important; 
+}
+
+.page-login, .page-register, .page-forgot{
+  
+  .bbp-template-notice{
+    margin-top: 25px;
+  }
+} 
+
+// HEADER
+.bbPress-fdry-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top:75px;
+  padding-bottom: 90px;
+}

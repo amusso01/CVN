@@ -45,6 +45,13 @@ $id = get_the_ID();
               <?php endforeach; ?>
               <?php endif; ?>
             </div>
+
+            <div class="content">
+              <?php  the_content() ?>
+              <div class="cta-content">
+                <a href="<?php echo $link ?>" class="btn">VISIT SITE</a>
+              </div>
+            </div>
           </div>
 
 

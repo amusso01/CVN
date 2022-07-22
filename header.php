@@ -43,8 +43,8 @@ $displaySocial = get_theme_mod('display-social');
 			<div class="content-block">
 				<ul>
 					<?php  ?>
-					<li><a href=""><i><?php get_template_part('svg-template/svg', 'icon-user' ) ?></i>Login</a></li>
-					<li><a href="">Become a member</a></li>
+					<li><a href="<?php echo site_url( '/login' ) ?>"><i><?php get_template_part('svg-template/svg', 'icon-user' ) ?></i>Login</a></li>
+					<li><a href="<?php echo site_url( '/register' ) ?>">Become a member</a></li>
 					<?php  ?>
 	
 					<?php  ?>

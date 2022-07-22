@@ -24,6 +24,7 @@
 @import "components/event_card";
 @import "components/featured-news";
 @import "components/network-navigation";
+@import "components/bbPress";
 
 // Templates
 @import "templates/home";
@@ -37,3 +38,5 @@
 @import "templates/partners";
 @import "templates/contact";
 @import "templates/404";
+@import "templates/login-register";
+@import "templates/about";

@@ -37,6 +37,8 @@ get_header();
 		</div>
 	</section>
 
+
+	
 	<section class=" home-latest-news">
 		<div class="content-block">
 			<h3 class="latest-title" >Latest news</h3>

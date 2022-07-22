@@ -14,7 +14,20 @@
 
 get_header();
 
+if(is_page('contact')){
+
 get_template_part( 'components/page/contact-hero' );
+
+}elseif(is_page('about')){
+
+	get_template_part( 'components/page/about-hero' );
+
+}else{
+
+	get_template_part( 'components/page/hero' );
+
+};
+
 
 ?>
 
@@ -28,6 +41,10 @@ get_template_part( 'components/page/contact-hero' );
 	if(is_page('contact')){
 		
 		get_template_part( 'template-parts/content', 'contact' );
+
+	}elseif(is_page('about')){
+
+		get_template_part( 'template-parts/content', 'about' );
 
 	}else{
 
