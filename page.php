@@ -22,6 +22,34 @@ get_template_part( 'components/page/contact-hero' );
 
 	get_template_part( 'components/page/about-hero' );
 
+}elseif(is_bbpress()){ ?>
+
+	<header class="bbPress-fdry-header">
+		<div class="content-block">
+			<div class="title">
+		
+		
+					<h1 class="hero-page-title"><?php echo  get_the_title(); ?></h1>
+		
+		
+		
+					<div class="archive-subtitle section-inner thin max-percentage intro-text"><?php echo wp_kses_post( wpautop( $archive_subtitle ) ); ?></div>
+		
+		
+			</div>
+		
+			<div class="cta">
+				<a class="btn" href="<?php echo site_url('/new-discussion') ?>">CREATE NEW DISCUSSION</a>
+			</div>
+
+		</div>
+
+
+</header>
+
+<div class="line-grey"></div>
+
+<?php
 }else{
 
 	get_template_part( 'components/page/hero' );
@@ -46,6 +74,22 @@ get_template_part( 'components/page/contact-hero' );
 
 		get_template_part( 'template-parts/content', 'about' );
 
+	}elseif(is_bbpress()){ ?>
+
+<div class="bbPress-fdry-inner">
+
+<?php while ( have_posts() ) : 
+ 
+	the_post();
+
+	get_template_part( 'template-parts/content', 'bbPress' );
+
+endwhile; ?>
+
+</div>
+
+
+	<?php
 	}else{
 
 		get_template_part( 'template-parts/content', 'page' );

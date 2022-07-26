@@ -8,7 +8,7 @@
 get_header();
 
 ?>
-<main id="site-content" class="content-block bbPress-fdry-content">
+<main id="site-content" class="content-block bbPress-fdry">
 
 <?php
 
@@ -52,7 +52,7 @@ if ( $archive_title || $archive_subtitle ) {
     <div class="title">
 
       <?php if ( $archive_title ) { ?>
-        <h1 class="archive-title"><?php echo  get_the_title(); ?></h1>
+        <h1 class="hero-page-title"><?php echo  get_the_title(); ?></h1>
       <?php } ?>
 
       <?php if ( $archive_subtitle ) { ?>
@@ -62,27 +62,32 @@ if ( $archive_title || $archive_subtitle ) {
     </div>
 
     <div class="cta">
-      <a href="<?php echo site_url('/new-discussion') ?>">CREATE NEW DISCUSSION</a>
+      <a class="btn" href="<?php echo site_url('/new-discussion') ?>">CREATE NEW DISCUSSION</a>
     </div>
 
   </header>
 
+  <div class="line-grey"></div>
+
   <?php
 }
 
-if ( have_posts() ) {
+if ( have_posts() ) : ?>
 
 
+<div class="bbPress-fdry-inner">
 
-  while ( have_posts() ) {
+  <?php while ( have_posts() ) : 
    
     the_post();
 
     get_template_part( 'template-parts/content', 'bbPress' );
 
-  }
-} elseif ( is_search() ) {
-  ?>
+  endwhile; ?>
+
+</div>
+  <?php
+elseif ( is_search() ) : ?>
 
   <div class="no-search-results-form section-inner thin">
 
@@ -97,7 +102,7 @@ if ( have_posts() ) {
   </div><!-- .no-search-results -->
 
   <?php
-}
+endif
 ?>
 
 

@@ -7,7 +7,14 @@
  * @package foundry
  */
 
+if ( is_active_sidebar( 'forum-sidebar' ) ) {
 ?>
+
+<aside class="in-header widget-area right" role="complementary">
+ <?php dynamic_sidebar( 'forum-sidebar' ); ?>
+</aside>
+
+<?php } ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">

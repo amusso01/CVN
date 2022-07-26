@@ -42,12 +42,14 @@ $displaySocial = get_theme_mod('display-social');
 		<div class="site_header-account">
 			<div class="content-block">
 				<ul>
-					<?php  ?>
-					<li><a href="<?php echo site_url( '/login' ) ?>"><i><?php get_template_part('svg-template/svg', 'icon-user' ) ?></i>Login</a></li>
-					<li><a href="<?php echo site_url( '/register' ) ?>">Become a member</a></li>
-					<?php  ?>
-	
-					<?php  ?>
+					<?php if(!is_user_logged_in()) : ?>
+						<li><a href="<?php echo site_url( '/login' ) ?>"><i><?php get_template_part('svg-template/svg', 'icon-user' ) ?></i>Login</a></li>
+						<li><a href="<?php echo site_url( '/register' ) ?>">Become a member</a></li>
+					<?php else : ?>
+						<?php $this_user = wp_get_current_user();  ?>
+						<li><a href="<?php echo site_url( '/forums' ) ?>">Forum</a></li>
+						<li>Welcome <a class="user-logged-in" href="<?php echo bbp_get_user_profile_url($this_user->ID); ?>"><?php echo $this_user->user_login ?> <i><?php get_template_part('svg-template/svg', 'icon-user' ) ?></i> </a></li>
+					<?php endif; ?>
 				</ul>
 			<!-- <?php get_search_form(); ?> -->
 

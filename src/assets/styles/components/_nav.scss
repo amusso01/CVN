@@ -9,6 +9,9 @@
 		width: 100%;
 		>li{
 			margin-right: 30px;
+			font-size: 14px;
+			font-weight: 600;
+			color: #808F99;
 			&:last-of-type{
 				margin-right: 0;
 			}
@@ -31,6 +34,15 @@
 					display: inline-block;
 					top: 3px;
 					margin-right: 5px;
+				}
+
+				&.user-logged-in{
+					color: #2A3890;
+					i{
+						margin-right: 0px;
+						margin-left: 5px;
+						top: 0px;
+					}
 				}
 			}
 		}
