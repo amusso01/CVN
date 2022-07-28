@@ -323,3 +323,11 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 // REMOVE archive title prefix
 add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
+
+
+//Subscribe by default
+function subscribed_by_default(){
+	echo '<script type="text/javascript">jQuery("#bbp_topic_subscription").prop("checked","checked");</script>';
+	}
+	add_filter('bbp_theme_after_topic_form_subscriptions','subscribed_by_default');
+	add_filter('bbp_theme_after_reply_form_subscription','subscribed_by_default');

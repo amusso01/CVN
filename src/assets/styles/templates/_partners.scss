@@ -8,6 +8,14 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 32px;
     row-gap: 32px;
+
+    @include media('<phone-land'){
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('<phone'){
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .partner-card{
@@ -15,6 +23,10 @@
     border: 1px solid #CCD2D6;
     border-radius: 13px;
     padding: 60px 32px;
+
+    @include media('<tablet'){
+      padding: 50px 22px;
+    }
 
     h4{
       color: $color__link;
@@ -37,6 +49,9 @@
       justify-content: space-between;
       align-items: center;
       margin-top: 50px;
+      flex-wrap: wrap;
+      row-gap: 20px;
+  
 
       .read-more{
         margin-right: 20px;

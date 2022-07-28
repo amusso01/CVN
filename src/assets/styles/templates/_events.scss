@@ -25,4 +25,11 @@
   column-gap: 30px;
   row-gap: 30px;
   margin-top: 37px;
+  @include media('<phone-land'){
+		grid-template-columns: repeat(2 ,1fr);
+	}
+
+  @include media('<phone'){
+		grid-template-columns: repeat(1 ,1fr);
+	}
 }

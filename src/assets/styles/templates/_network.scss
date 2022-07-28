@@ -27,6 +27,14 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 32px;
     row-gap: 32px;
+
+    @include media('<tablet'){
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @include media('<phone-land'){
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .center-card{
@@ -35,6 +43,10 @@
     border-radius: 13px;
     padding: 32px;
 
+    @include media('<phone-land'){
+      padding: 15px;
+    }
+
     >h4{
       color: $color__link;
       font-size: 36px;
@@ -42,6 +54,7 @@
     }
 
     .info{
+      word-break: break-all;
       color:#808F99 ;
       font-weight: 700;
       font-family: $header__fontname;
@@ -53,9 +66,11 @@
 
     .location, .contact{
       margin-bottom: 18px;
+      word-break: break-all;
 
       p{
         font-size: 14px;
+        
       }
     } 
 

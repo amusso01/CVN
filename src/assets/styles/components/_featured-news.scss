@@ -7,12 +7,25 @@
   .glide__slide{
     display: grid;
     grid-template-columns: 1fr 1.3fr;
+
+    @include media('<phone-land'){
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .news-info{
     background-color: #F5F6F7;
     padding: 60px 90px 60px 70px;
     min-height: 520px;
+
+    @include media('<phone-land'){
+      padding: 30px 50px 30px 40px;
+      min-height: 320px;
+    }
+
+    @include media('<phone'){
+      padding: 30px 20px 30px 20px;
+    }
   }
 
   .date{
@@ -46,6 +59,10 @@
     position: absolute;
     bottom: 30px;
     left: 70px;
+
+    @include media('<phone'){
+      display: none;
+    }
 
     .glide__bullet{
       background-color:#CCD2D6;

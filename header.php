@@ -47,8 +47,9 @@ $displaySocial = get_theme_mod('display-social');
 						<li><a href="<?php echo site_url( '/register' ) ?>">Become a member</a></li>
 					<?php else : ?>
 						<?php $this_user = wp_get_current_user();  ?>
-						<li><a href="<?php echo site_url( '/forums' ) ?>">Forum</a></li>
+						<li><a href="<?php echo site_url( '/forums' ) ?>">Message Board</a></li>
 						<li>Welcome <a class="user-logged-in" href="<?php echo bbp_get_user_profile_url($this_user->ID); ?>"><?php echo $this_user->user_login ?> <i><?php get_template_part('svg-template/svg', 'icon-user' ) ?></i> </a></li>
+						<li><a href="<?php echo wp_logout_url() ?>">Log Out</a></li>
 					<?php endif; ?>
 				</ul>
 			<!-- <?php get_search_form(); ?> -->

@@ -14,6 +14,14 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 32px;
     row-gap: 60px;
+
+    @include media('<tablet'){
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media('<phone'){
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
 }
@@ -25,7 +33,15 @@
 
   .figure{
     width: 400px;
-    height: 275px;
+    height: 275px!important;
+
+    @include media('<desktop'){
+      width: 320px;
+    }
+
+    @include media('<phone'){
+      width: 100%;
+    }
 
   }
 

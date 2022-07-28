@@ -10,7 +10,11 @@
 if ( is_active_sidebar( 'forum-sidebar' ) ) {
 ?>
 
-<aside class="in-header widget-area right" role="complementary">
+<aside class="fdry-aside-bbPress" role="complementary">
+	<div class="welcome">
+		<h2>Welcome</h2>
+		<p>Welcome to The UK Clinical Virology Network Forum! This forum was developed due to popular demand for information and news. Please use this forum to learn, discuss and contribute to the latest topics.</p>
+	</div>
  <?php dynamic_sidebar( 'forum-sidebar' ); ?>
 </aside>
 

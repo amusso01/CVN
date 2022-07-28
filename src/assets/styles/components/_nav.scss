@@ -73,6 +73,7 @@
 			padding: 50px 0 0 3rem ;
 			left: -290px;
 			transition: left 0.3s;
+			z-index: 10;
 
 			&.s-open{
 				left: 0;

@@ -33,6 +33,10 @@
 
   .figure{
     height: 565px;
+
+    @include media('<phone-land'){
+      height: 405px;
+    }
   }
 
   .news-content{
