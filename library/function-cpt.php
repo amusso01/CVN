@@ -174,5 +174,86 @@
 
 
   add_action( 'init', 'bml_create_partners_cpt' );
+
+
+
+
+// Guidelines & Resources
+// function bml_create_guidelines_cpt() {
+
+//   $labels = array(
+//     'name' => _x( 'Guidelines & Resources', 'post type general name', 'bymattlee' ),
+//     'singular_name' => _x( 'Guidelines & Resources', 'post type singular name', 'bymattlee' ),
+//     'menu_name' => _x( 'Guidelines & Resources', 'admin menu', 'bymattlee' ),
+//     'name_admin_bar' => _x( 'Guidelines & Resources', 'add new on admin bar', 'bymattlee' ),
+//     'add_new' => _x( 'Add New', 'Guidelines & Resources', 'bymattlee' ),
+//     'add_new_item' => __( 'Add New Guidelines & Resources', 'bymattlee' ),
+//     'new_item' => __( 'New Guidelines & Resources', 'bymattlee' ),
+//     'edit_item' => __( 'Edit Guidelines & Resources', 'bymattlee' ),
+//     'view_item' => __( 'View Guidelines & Resources', 'bymattlee' ),
+//     'all_items' => __( 'All Guidelines & Resources', 'bymattlee' ),
+//     'search_items' => __( 'Search Guidelines & Resources', 'bymattlee' ),
+//     'parent_item_colon' => __( 'Parent Guidelines & Resources:', 'bymattlee' ),
+//     'not_found' => __( 'No Guidelines & Resources found.', 'bymattlee' ),
+//     'not_found_in_trash' => __( 'No Guidelines & Resources found in Trash.', 'bymattlee' )
+//   );
+
+//   $args = array(
+//     'labels' => $labels,
+//     'description' => __( 'Description.', 'bymattlee' ),
+//     'public' => true,
+//     'publicly_queryable' => true,
+//     'show_ui' => true,
+//     'show_in_menu' => true,
+//     'query_var' => true,
+//     'rewrite' => array( 'slug' => 'Guidelines & Resources-archive' ),
+//     'capability_type' => 'post',
+//     'has_archive' => true,
+//     'taxonomies' => array('bml-type'),
+//     'hierarchical' => true,
+//     'menu_position' => null,
+//     'show_in_rest' => true,
+//     'menu_icon' => 'dashicons-admin-post',
+//     'supports' => array( 'title', 'editor' )
+//   );
+
+//   register_post_type( 'bml-guidelines', $args );
+
+// }
+
+// add_action( 'init', 'bml_create_guidelines_cpt' );
+
+
+// function bml_create_guidelines_taxonomies() {
+  
+//   // Add new taxonomy, make it hierarchical (like categories)
+//   $labels = array(
+//     'name' => _x( 'Type', 'taxonomy general name', 'bymattlee' ),
+//     'singular_name' => _x( 'Type', 'taxonomy singular name', 'bymattlee' ),
+//     'search_items' => __( 'Search Type', 'bymattlee' ),
+//     'all_items' => __( 'All Type', 'bymattlee' ),
+//     'parent_item' => __( 'Parent Type', 'bymattlee' ),
+//     'parent_item_colon' => __( 'Parent Type:', 'bymattlee' ),
+//     'edit_item' => __( 'Edit Type', 'bymattlee' ),
+//     'update_item' => __( 'Update Type', 'bymattlee' ),
+//     'add_new_item' => __( 'Add New Type', 'bymattlee' ),
+//     'new_item_name' => __( 'New Type Name', 'bymattlee' ),
+//     'menu_name' => __( 'Type', 'bymattlee' ),
+//   );
+
+//   $args = array(
+//     'hierarchical' => true,
+//     'labels' => $labels,
+//     'show_ui' => true,
+//     'show_admin_column' => true,
+//     'show_in_rest' => true,
+//     'query_var' => true,
+//     'rewrite' => array( 'slug' => 'type' ),
+//   );
+
+//   register_taxonomy( 'bml-type', array( 'bml-guidelines' ), $args );
+// }
+
+// add_action( 'init', 'bml_create_guidelines_taxonomies', 0 );
   
 ?>

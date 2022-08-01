@@ -6,6 +6,11 @@ import Router from "./util/Router";
 import common from "./routes/common";
 import home from "./routes/home";
 import about from "./routes/about";
+import Alpine from 'alpinejs'
+ 
+
+ 
+
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -19,4 +24,7 @@ const routes = new Router({
 
 document.addEventListener("DOMContentLoaded", function (event) {
 	routes.loadEvents();
+	window.Alpine = Alpine
+	
+	Alpine.start()
 });
