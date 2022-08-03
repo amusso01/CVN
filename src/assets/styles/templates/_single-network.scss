@@ -73,6 +73,7 @@
         font-size: 22px;
         line-height: 30px;
         margin-bottom: 3px;
+        color: #272766;
       }
       .role{
         font-size: 18px;
@@ -115,6 +116,16 @@
       .social{
         display: flex;
         column-gap: 10px;
+
+        svg{
+          &:hover{
+            path{
+              &:first-of-type{
+                fill:#1B75BB;
+              }
+            }
+          }
+        }
       }
     }
   }

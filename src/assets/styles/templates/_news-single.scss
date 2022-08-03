@@ -1,4 +1,4 @@
-.news-main{
+.single-main{
   padding: 70px 0 80px;
 
   header{
@@ -71,6 +71,16 @@
         list-style: none;
         column-gap: 10px;
         margin-top: 8px;
+      }
+
+      svg{
+        &:hover{
+          path{
+            &:first-of-type{
+              fill:#1B75BB;
+            }
+          }
+        }
       }
 
     }

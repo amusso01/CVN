@@ -75,7 +75,7 @@ get_header();
 				<div class="event-details">
 					<div class="left">
 						<ul>
-							<li class="title"><i></i> LOCATION</li>
+							<li class="title"><i><?php get_template_part( 'svg-template/svg', 'details' ) ?></i> LOCATION</li>
 							<li><?php echo $location ?></li>
 						</ul>
 						<?php the_content() ?>

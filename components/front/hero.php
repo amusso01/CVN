@@ -12,7 +12,7 @@
 
 <section class="hero-bg-home">
   <div class="text">
-    <h2>Join The UK Clinical <br> Virology Network <br> Community</h2>
+    <h2>Join The UK Clinical <br> Virology Network</h2>
     <div class="cta">
       <a href="<?php echo site_url( '/register' ) ?>" class="btn">BECOME A MEMBER</a>
       <a href="<?php echo site_url( '/login' ) ?>" class="btn">LOGIN</a>

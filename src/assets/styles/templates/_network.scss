@@ -42,6 +42,9 @@
     border: 1px solid #CCD2D6;
     border-radius: 13px;
     padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     @include media('<phone-land'){
       padding: 15px;

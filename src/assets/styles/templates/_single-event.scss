@@ -59,6 +59,16 @@
           margin-right: 60px;
           color: #279BD5;
           font-family: $header__fontname;
+
+          i{
+            display: inline-block;
+            margin-right: 5px;
+
+            svg{
+              height: 18px;
+            }
+          }
+
         }
       }
       >p{
@@ -101,6 +111,15 @@
       .social{
         display: flex;
         column-gap: 10px;
+        svg{
+          &:hover{
+            path{
+              &:first-of-type{
+                fill:#1B75BB;
+              }
+            }
+          }
+        }
       }
     }
   }

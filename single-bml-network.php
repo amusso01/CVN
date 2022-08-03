@@ -44,11 +44,13 @@ get_header();
 						</div>
 					</div>
 					<div class="center">
+						<?php if(is_user_logged_in()) : ?>
 						<div class="contact">
 							<h4 class="hBlue">CONTACT</h4>
 							<p><?php echo $contact['text'] ?></p>
 							<p><a href="mailto:<?php echo $contact['email'] ?>"><?php echo $contact['email'] ?></a></p>
 						</div>
+						<?php endif; ?>
 						<div class="telephone-fax">
 							<h4 class="hBlue">TELEPHONE & FAX NUMBER</h4>
 							<p><?php echo $telFax ?></p>
@@ -68,12 +70,15 @@ get_header();
 					</div>
 
 					<div class="full">
+						<?php if($content) : ?>
 						<div class="what-we-do">
 							<h4 class="hBlue">WHAT DO WE DO?</h4>
 							<div class="u-rich-text">
 								<?php echo $content ?>
 							</div>	
 						</div>
+						<?php endif; ?>
+						<?php if($members) : ?>
 						<div class="staff">
 							<h4 class="hBlue">STAFF</h4>
 							<div class="staff-grid">
@@ -81,11 +86,14 @@ get_header();
 									<div class="single-staf">
 										<p class="name"><?php echo $member['name'] ?></p>
 										<p class="role"><?php echo $member['role'] ?></p>
+										<?php if(is_user_logged_in()) : ?>
 										<p class="email"><a href="mailto:<?php echo $member['email'] ?>"> <?php echo $member['email'] ?></a></p>
+										<?php endif; ?>
 									</div>
 								<?php endforeach; ?>
 							</div>
 						</div>
+						<?php endif; ?>
 					</div>
 				</div>
 

@@ -76,6 +76,8 @@ function acfSearch() {
               this.searchable.push(guideline)
               
             }else{
+
+  
   
               if(guideline.has_download){
   
@@ -88,6 +90,10 @@ function acfSearch() {
                   }
     
                 } )
+              }else{
+                if(guideline.text.toLowerCase().includes(this.search.toLowerCase())){
+                  this.searchable.push(guideline)
+                }
               }
               // Remove same object from searchable if added twice
               this.searchable =  this.searchable.reduce((acc, current) => {
@@ -122,6 +128,10 @@ function acfSearch() {
                   }
 
                 } )
+              }else{
+                if(resource.text.toLowerCase().includes(this.search.toLowerCase())){
+                  this.searchable.push(resource)
+                }
               }
               // Remove same object from searchable if added twice
               this.searchable =  this.searchable.reduce((acc, current) => {
@@ -178,7 +188,7 @@ function acfSearch() {
       <!-- GUIDELINES -->
       <section x-init="fetchGuidelines()" class="gr-content s-active" data-selector="guidelines" >
         <div class="gr-search">
-          <input type="text" x-model="search">
+          <input placeholder="Type here to search..." type="text" x-model="search">
           <button   @click="filteredSearch()" >Search</button>
           <p class="clear-gr" @click="fetchGuidelines()" x-show="isSearch" >Clear all</p>
         </div>
@@ -278,7 +288,7 @@ function acfSearch() {
       <!-- RESOURCES -->
       <section  x-init="fetchResources()" class="gr-content" data-selector="resources" >
         <div class="gr-search">
-          <input type="text" x-model="search">
+          <input placeholder="Type here to search..." type="text" x-model="search">
           <button   @click="filteredSearch('res')" >Search</button>
           <p class="clear-gr" @click="fetchResources()" x-show="isSearch" >Clear all</p>
         </div>

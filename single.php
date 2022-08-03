@@ -51,8 +51,6 @@ $the_query = new WP_Query( $args );
 
 				<div class="u-rich-text">
 
-					<h3 class="main-title"><?php echo get_the_title() ?></h3>
-
 					<?php the_content(); ?>
 
 				</div>
