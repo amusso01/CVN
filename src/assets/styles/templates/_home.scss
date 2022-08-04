@@ -3,13 +3,15 @@
   grid-template-columns: 1fr 1fr;
   margin-bottom: 60px;
 
+
   @include media('<phone'){
     grid-template-columns: 1fr;
   }
 
   .text{
     background-color: #272766;
-    padding: 94px 78px 111px;
+    padding: 54px 28px 51px 78px;
+    min-height: 480px;
 
     @include media('<phone'){
       padding: 54px 28px 71px;
@@ -17,7 +19,7 @@
 
     h2{
       color: $color__bright;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       font-size: 36px;
       line-height: 46px;
     }
@@ -30,6 +32,8 @@
 
       .btn{
         padding: 20px;
+        color: $color__bright;
+        text-transform: uppercase;
         &:first-of-type{
           background-color: #279BD5;
           margin-right: 16px;
@@ -194,4 +198,32 @@
       }
     }
   }
+}
+
+#homeGlide{
+
+  overflow: hidden;
+  position: relative;
+
+  p{
+    color: $color__bright;
+    margin-bottom: 25px;
+  }
+
+.glide__arrows{
+  position: absolute;
+  bottom: 10px;
+  left: 22px;
+
+  button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    svg{
+      width: 40px;
+    }
+  }
+}
+  
 }

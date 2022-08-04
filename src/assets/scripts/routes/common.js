@@ -32,6 +32,12 @@ export default {
 			new Glide('.glide-featured-news').mount()
 		} 
 
+		// GLIDE HOME
+		const homeGlide = document.getElementById("homeGlide");
+		if(typeof(homeGlide) != 'undefined' && homeGlide != null){
+			new Glide('.glide-home').mount()
+		} 
+
 		// MODAL 
 		const modalEl = document.getElementById("jsModal");
 		if(typeof(modalEl) != 'undefined' && modalEl != null){
