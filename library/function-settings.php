@@ -331,3 +331,26 @@ function subscribed_by_default(){
 	}
 	add_filter('bbp_theme_after_topic_form_subscriptions','subscribed_by_default');
 	add_filter('bbp_theme_after_reply_form_subscription','subscribed_by_default');
+
+
+
+	// REDIRECT AFTER LOGIN
+	function login_redirect( $redirect_to, $request, $user ){
+    return home_url('forums');
+	}
+	add_filter( 'login_redirect', 'login_redirect', 10, 3 );
+
+
+
+// DISABLE ADMIN BAR FOR ALL USER EXCEPT ADMIN
+// add_action('after_setup_theme', 'remove_admin_bar');
+// function remove_admin_bar() {
+// if (!current_user_can('administrator') && !is_admin()) {
+//   show_admin_bar(false);
+// }
+// }
+
+
+
+/* Disable WordPress Admin Bar for all users */
+add_filter( 'show_admin_bar', '__return_false' );

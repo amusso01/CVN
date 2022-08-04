@@ -2,6 +2,7 @@ import smoothscroll from "smoothscroll-polyfill";
 import hamburger from "./../part/hamburger";
 import tabNavigation from "../part/tabNavigation";
 import modal from "../part/modal";
+import modalHome from "../part/modalHome";
 
 
 import Glide from '@glidejs/glide'
@@ -42,6 +43,11 @@ export default {
 		const modalEl = document.getElementById("jsModal");
 		if(typeof(modalEl) != 'undefined' && modalEl != null){
 			modal()
+		} 
+
+		const modalFront = document.getElementById("jsModalHome");
+		if(typeof(modalFront) != 'undefined' && modalFront != null){
+			modalHome()
 		} 
 
 		// TAB GUIDELINES
