@@ -1,0 +1,35 @@
+.page-rss{
+  .u-rich-text{
+    h1,h2,h3,h4,h5,h6 {
+      color: $color__main;
+    }
+
+    h4{
+      font-size: 18px;
+    }
+
+    time{
+      text-decoration: underline;
+    }
+
+    .wp-block-rss__item-title{
+      margin-bottom: 7px;
+
+      a{
+        font-weight: 500;
+        font-size: 16px;
+        color: $color__link-hover;
+
+        &:hover{
+          color: $color__link;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .wp-block-rss__item-publish-date{
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+  }
+}

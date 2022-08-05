@@ -113,6 +113,11 @@
   pointer-events: none;
   top:-130%;
   transition: all .5s ;
+  padding: 550px 0;
+
+  @include media('<phone'){
+    padding: 400px 0;
+  }
 
   &.s-active{
     opacity: 1;
@@ -136,6 +141,16 @@
     position: relative;
     opacity: 0;
     transition: opacity 1s;
+
+    @include media('<tablet'){
+      width: 95%;
+    }
+    @include media('<phone-land'){
+      grid-template-columns: 1fr;
+    }
+    @include media('<phone'){
+      padding: 30px;
+    }
   }
 
   .header{
@@ -147,6 +162,12 @@
       color: #272766;
     }
 
+    img{
+      @include media('<phone'){
+        display: none;
+      }
+    }
+
   }
 
   .info{
@@ -155,6 +176,11 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: 45px;
     column-gap: 30px;
+
+    @include media('<phone-land'){
+      grid-template-columns: 1fr;
+    }
+
 
     h4{
       color: #808F99;
@@ -165,6 +191,12 @@
 
     .content{
       grid-column: 1 / -1;
+
+      >p{
+        @include media('<phone-land'){
+          display: none;
+        }
+      }
     
       .cta-content{
         text-align: right;

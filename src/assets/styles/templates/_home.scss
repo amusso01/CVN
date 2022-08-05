@@ -122,6 +122,8 @@
     line-height: 46px;
   }
 
+
+
   .grid-partners{
     display: grid;
     margin-top: 27px;
@@ -143,7 +145,6 @@
       pointer-events: none;
     }
 
-
     .figure{
       height:74px;
       width: 180px;
@@ -151,6 +152,8 @@
         object-fit: contain;
       }
     }
+
+ 
 
   }
 }
@@ -215,6 +218,10 @@
   position: absolute;
   bottom: 10px;
   left: 22px;
+
+  @include media('<phone'){
+    display: none;
+  }
 
   button{
     border: none;

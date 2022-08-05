@@ -14,6 +14,15 @@ if ( is_active_sidebar( 'forum-sidebar' ) ) {
 	<div class="welcome">
 		<h2>Welcome</h2>
 		<p>Welcome to The UK Clinical Virology Network Forum! This forum was developed due to popular demand for information and news. Please use this forum to learn, discuss and contribute to the latest topics.</p>
+
+		<p class="title"><strong>From Here you can also access:</strong></p>
+
+		<ul>
+			<?php $this_user = wp_get_current_user();  ?>
+			<li><a class="user-logged-in" href="<?php echo bbp_get_user_profile_url($this_user->ID); ?>"> My Profile </a></li>
+			<li><a href="<?php echo site_url( 'networking-directory' ) ?>">Premium access to networking</a></li>
+		</ul>
+
 	</div>
  <?php dynamic_sidebar( 'forum-sidebar' ); ?>
 </aside>
