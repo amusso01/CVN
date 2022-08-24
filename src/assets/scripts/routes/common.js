@@ -36,7 +36,9 @@ export default {
 		// GLIDE HOME
 		const homeGlide = document.getElementById("homeGlide");
 		if(typeof(homeGlide) != 'undefined' && homeGlide != null){
-			new Glide('.glide-home').mount()
+			new Glide('.glide-home', {
+				autoplay: 20000,
+			}).mount()
 		} 
 
 		// MODAL 
@@ -55,6 +57,23 @@ export default {
 		if(typeof(guidelines) != 'undefined' && guidelines != null){
 			tabNavigation()
 		}
+
+
+		// MENU DROPDOWN
+		const dropdown = document.querySelectorAll('.menu-item-has-children')
+		dropdown.forEach(element => {
+			element.addEventListener('mouseover' , ()=>{
+				let innerMenu = element.querySelector('.sub-menu')
+
+				innerMenu.classList.add('s-show')
+			})
+
+			element.addEventListener('mouseleave' , ()=>{
+				let innerMenu = element.querySelector('.sub-menu')
+
+				innerMenu.classList.remove('s-show')
+			})
+		});
 
 	},
 };

@@ -220,12 +220,13 @@
 .bbp-breadcrumb{
   p{
     a{
-      font-size: 14px;
+      font-size: 16px;
     }
   }
-  .bbp-breadcrumb-current{
-    font-size: 14px;
+  .bbp-breadcrumb-current, .bbp-breadcrumb-sep{
+    font-size: 16px;
   }
+
 }
 
 #subscription-toggle{
@@ -359,4 +360,29 @@
       }
     }
   }
+}
+
+label[for=bbp_stick_topic],
+label[for=bbp_topic_status],
+label[for=bbp_forum_type],
+label[for=bbp_forum_status],
+label[for=bbp_forum_visibility],
+#bbp_stick_topic_select,
+#bbp_topic_status_select,
+#bbp_forum_type_select,
+#bbp_forum_status_select,
+#bbp_forum_visibility_select
+{
+  display: none !important;
+}
+
+.bbp-form{
+  legend{
+    font-size: 22px;
+    color: #272766;
+  }
+}
+
+ .bbp-topic-content p, .bbp-reply-content p {
+    font-size: 13px;
 }

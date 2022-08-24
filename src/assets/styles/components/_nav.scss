@@ -75,6 +75,7 @@
 			transition: left 0.3s;
 			z-index: 10;
 
+
 			&.s-open{
 				left: 0;
 			}
@@ -130,10 +131,50 @@
 						color: $color__link-hover;
 					}
 				}
+
+
+				&.menu-item-has-children{
+					position: relative;
+					
+					.sub-menu{
+
+						background-color: #fff;
+						position: absolute;
+						padding: 20px;
+						min-width: 290px;
+						top: 0px;
+						box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+						border-radius: 13px;
+						opacity: 0;
+						pointer-events: none;
+						transition: all .5s;
+						z-index: 10;
+
+						&.s-show{
+							top: 40px;
+							left: 0;
+							opacity: 1;
+							pointer-events: all;
+						}
+
+						.menu-item{
+
+							&::after{
+								display: none !important;
+							}
+
+							a{
+								font-size: 14px;
+							}
+						}
+
+					}
+				}
 			}
 		}
 
 	}
+
 
 	.site-header__hamburger{
 

@@ -61,9 +61,9 @@ if ( $archive_title || $archive_subtitle ) {
 
     </div>
 
-    <div class="cta">
+    <!-- <div class="cta">
       <a class="btn" href="<?php echo site_url('/new-discussion') ?>">CREATE NEW DISCUSSION</a>
-    </div>
+    </div> -->
 
   </header>
 

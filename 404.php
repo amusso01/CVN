@@ -23,6 +23,13 @@ get_header(); ?>
 
 		</div>
 
+
+		
+		<p style="margin-top: 60px;"><strong>To see the Message Board please login</strong></p>
+		<div class="content-block">
+			<?php echo do_shortcode( '[bbp-login] ' )   ?>
+		</div>
+
 	</section>
 
 </main>

@@ -9,7 +9,12 @@
 
   &.s-disabled{
     opacity: 0.5;
-    pointer-events: none;
+    transition: opacity .3s;
+
+
+    &:hover{
+      opacity: 1;
+    }
   }
 
   .event-info{

@@ -22,6 +22,10 @@ get_template_part( 'components/page/contact-hero' );
 
 	get_template_part( 'components/page/about-hero' );
 
+}elseif(is_page('welcome')){
+
+	get_template_part( 'components/page/welcome-hero' );
+
 }elseif(is_bbpress()){ ?>
 
 	<header class="bbPress-fdry-header">
@@ -38,9 +42,9 @@ get_template_part( 'components/page/contact-hero' );
 		
 			</div>
 		
-			<div class="cta">
+			<!-- <div class="cta">
 				<a class="btn" href="<?php echo site_url('/new-discussion') ?>">CREATE NEW DISCUSSION</a>
-			</div>
+			</div> -->
 
 		</div>
 
@@ -73,6 +77,10 @@ get_template_part( 'components/page/contact-hero' );
 	}elseif(is_page('about')){
 
 		get_template_part( 'template-parts/content', 'about' );
+
+	}elseif(is_page('welcome')){
+
+		get_template_part( 'template-parts/content', 'welcome' );
 
 	}elseif(is_bbpress()){ ?>
 

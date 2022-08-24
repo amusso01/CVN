@@ -336,7 +336,7 @@ function subscribed_by_default(){
 
 	// REDIRECT AFTER LOGIN
 	function login_redirect( $redirect_to, $request, $user ){
-    return home_url('forums');
+    return home_url('welcome');
 	}
 	add_filter( 'login_redirect', 'login_redirect', 10, 3 );
 
@@ -354,3 +354,48 @@ function subscribed_by_default(){
 
 /* Disable WordPress Admin Bar for all users */
 add_filter( 'show_admin_bar', '__return_false' );
+
+
+// REDIRECT NOT LOGED IN USER
+
+function rkk_restrict_bbp_user_pages() {
+
+	if ( ! is_user_logged_in() ) {
+
+		 if ( bbp_is_single_user() || bbp_is_single_topic() || bbp_is_single_forum() || bbp_is_forum_archive() ) {
+
+									$url = site_url('/login');
+
+											// Send them to the new URL
+									wp_redirect( $url );
+
+									exit;
+}
+	}
+}
+add_action( 'template_redirect', 'rkk_restrict_bbp_user_pages');
+
+// REMOVE WORD PRIVATE AND PROTECTED FROM FORUM
+add_filter('private_title_format', 'ntwb_remove_private_title');
+function ntwb_remove_private_title($title) {
+	return '%s';
+}
+
+add_filter('protected_title_format', 'ntwb_remove_protected_title');
+function ntwb_remove_protected_title($title) {
+	return '%s';
+}
+
+// REMOVE HOME FROM BREADCRUMB BBPRESS
+function mycustom_breadcrumb_options() {
+	// Home - default = true
+	$args['include_home']    = false;
+	// Forum root - default = true
+	$args['include_root']    = true;
+	// Current - default = true
+	$args['include_current'] = true;
+
+	return $args;
+}
+
+add_filter('bbp_before_get_breadcrumb_parse_args', 'mycustom_breadcrumb_options' );

@@ -13,6 +13,11 @@
 
   .event-date.s-disabled{
     opacity: 0.5;
+    transition: opacity .3s;
+
+    &:hover{
+      opacity: 1;
+    }
   }
 
   .line-grey{
@@ -96,7 +101,6 @@
 
         &.s-disabled{
           background-color: #CCD2D6;
-          pointer-events: none;
         }
 
       }
