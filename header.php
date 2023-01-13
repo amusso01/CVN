@@ -47,7 +47,7 @@ $displaySocial = get_theme_mod('display-social');
 						<li><a href="<?php echo site_url( '/register' ) ?>">Create online account</a></li>
 					<?php else : ?>
 						<?php $this_user = wp_get_current_user();  ?>
-						<li><a href="<?php echo site_url( '/message-boards' ) ?>">Message Board</a></li>
+						<li><a href="<?php echo site_url( '/message-boards/message-board/general-discussion/' ) ?>">Message Board</a></li>
 						<li>Welcome <a class="user-logged-in" href="<?php echo site_url('/welcome') ?>"><?php echo $this_user->user_login ?> <i><?php get_template_part('svg-template/svg', 'icon-user' ) ?></i> </a></li>
 						<li><a href="<?php echo wp_logout_url() ?>">Log Out</a></li>
 					<?php endif; ?>
