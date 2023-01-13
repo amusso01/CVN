@@ -24,6 +24,20 @@
     }
   }
 
+  .acf-label{
+    margin-bottom: 7px;
+  }
+
+  .acf-input{
+    margin-bottom: 20px;
+    input{
+      border: 1px solid #CCD2D6 ;
+      border-radius: 13px;
+      min-height: 54px!important;
+      width: 100%;
+    }
+  }
+
   .bbp-username{
 
     >p{
@@ -385,4 +399,13 @@ label[for=bbp_forum_visibility],
 
  .bbp-topic-content p, .bbp-reply-content p {
     font-size: 13px;
+}
+
+// REGISTER
+.bbp-login-form{
+  .bbp-form{
+    h2{
+      display: none;
+    }
+  }
 }

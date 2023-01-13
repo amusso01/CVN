@@ -16,7 +16,6 @@ $featuredNews = get_field('featured_news' , $pageId);
               <div class="date"><?php echo get_the_date('M d, Y', $news->ID)   ?></div>
               <div class="header">
                 <h4><?php echo $news->post_title ?></h4>
-                <p><?php echo $news->post_excerpt  ?></p>
                 <a href="<?php echo get_the_permalink( $news->ID) ?>" class="btn">READ MORE</a>
               </div>
             </div>

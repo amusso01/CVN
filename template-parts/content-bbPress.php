@@ -20,7 +20,7 @@ if ( is_active_sidebar( 'forum-sidebar' ) ) {
 		<ul>
 			<?php $this_user = wp_get_current_user();  ?>
 			<li><a class="user-logged-in" href="<?php echo bbp_get_user_profile_url($this_user->ID); ?>"> My Profile </a></li>
-			<li><a href="<?php echo site_url( 'networking-directory' ) ?>">Premium access to networking</a></li>
+			<li><a href="<?php echo site_url( 'networking-directory' ) ?>">Detailed Network Directory</a></li>
 		</ul>
 
 	</div>

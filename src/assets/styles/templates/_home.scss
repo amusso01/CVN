@@ -214,24 +214,24 @@
     margin-bottom: 25px;
   }
 
-.glide__arrows{
-  position: absolute;
-  bottom: 10px;
-  left: 22px;
+  .glide__arrows{
+    position: absolute;
+    bottom: 10px;
+    left: 22px;
 
-  @include media('<phone'){
-    display: none;
-  }
+    @include media('<phone'){
+      display: none;
+    }
 
-  button{
-    border: none;
-    background: transparent;
-    cursor: pointer;
+    button{
+      border: none;
+      background: transparent;
+      cursor: pointer;
 
-    svg{
-      width: 40px;
+      svg{
+        width: 40px;
+      }
     }
   }
-}
   
 }

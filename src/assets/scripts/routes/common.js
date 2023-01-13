@@ -37,7 +37,7 @@ export default {
 		const homeGlide = document.getElementById("homeGlide");
 		if(typeof(homeGlide) != 'undefined' && homeGlide != null){
 			new Glide('.glide-home', {
-				autoplay: 20000,
+				autoplay: 5000,
 			}).mount()
 		} 
 

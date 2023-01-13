@@ -23,7 +23,7 @@
 <?php 
   $argsInner = array (
   'post_type' => 'bml-network',
-  'posts_per_page' => 3,
+  'posts_per_page' => -1,
   'tax_query' => array( // (array) - use taxonomy parameters (available with Version 3.1).
     array(
       'taxonomy' => 'bml-alphabetical', // (string) - Taxonomy.
@@ -55,8 +55,3 @@ endwhile; ?>
 
 
 <?php endforeach; ?>
-
-
-
-
-

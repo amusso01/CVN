@@ -22,15 +22,6 @@
         </div>
       </a>
 
-			<a href="<?php echo  site_url('/networking-directory') ?>">
-        <div class="single-card">
-          
-          <figure class="figure" >
-            <img src="<?php echo get_template_directory_uri() ?>/dist/images/network.png" alt="Network access">
-          </figure>
-          <h4>Premium access to networking</h4>
-        </div>
-      </a>
 			<?php $this_user = wp_get_current_user();  ?>
 			<a href="<?php echo bbp_get_user_profile_url($this_user->ID); ?>">
         <div class="single-card">
@@ -39,6 +30,17 @@
             <img src="<?php echo get_template_directory_uri() ?>/dist/images/profile.png" alt="Profile access">
           </figure>
           <h4>My Profile</h4>
+        </div>
+      </a>
+
+
+			<a href="<?php echo  site_url('/networking-directory') ?>">
+        <div class="single-card">
+          
+          <figure class="figure" >
+            <img src="<?php echo get_template_directory_uri() ?>/dist/images/network.png" alt="Network access">
+          </figure>
+          <h4>Detailed Network Directory</h4>
         </div>
       </a>
   </div>

@@ -56,7 +56,9 @@ get_template_part( 'components/page/contact-hero' );
 <?php
 }else{
 
-	get_template_part( 'components/page/hero' );
+	if(!is_page('privacy-policy') && !is_page('terms-conditions')){
+		get_template_part( 'components/page/hero' );
+	}
 
 };
 

@@ -21,7 +21,7 @@ $id = get_the_ID();
       <p data-card="<?php echo $uid ?>"  class="read-more js-partners-modal-btn">MORE INFO</p>
     </div>
 
-    <div  data-modal="<?php echo $uid ?>"  class="partner-modal">
+    <div  data-modal="<?php echo $uid ?>" style="overflow:scroll;"  class="partner-modal">
         <div class="inner-modal">
           <div class="header">
             <img src="<?php echo get_the_post_thumbnail_url($id) ?>" alt="<?php echo get_the_title() ?> logo">

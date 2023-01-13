@@ -399,3 +399,13 @@ function mycustom_breadcrumb_options() {
 }
 
 add_filter('bbp_before_get_breadcrumb_parse_args', 'mycustom_breadcrumb_options' );
+
+
+// keep users logged in for longer in wordpress
+function wcs_users_logged_in_longer( $expirein ) {
+	// 1 month in seconds
+	return 31536000;
+}
+add_filter( 'auth_cookie_expiration', 'wcs_users_logged_in_longer' );
+
+

@@ -38,7 +38,7 @@ get_header();
       }
     }
 
-		if( strtotime($endArray[2].$endArray[1].$endArray[0]) <= strtotime($today) ) {
+		if( strtotime($endArray[2].$endArray[1].$endArray[0]) >= strtotime($today) ) {
 
 				$past = true;
 
@@ -47,7 +47,7 @@ get_header();
 	// debug($today);
 	// debug(strtotime($endArray[2].$endArray[1].$endArray[0]));
 	// debug(strtotime($today));
-	// dd($endDate)
+	// dd($past)
 
 	?>
 
@@ -81,14 +81,16 @@ get_header();
 						<?php the_content() ?>
 					</div>
 					<div class="right">
+						<?php if($regUrl) : ?>
 						<a href="<?php echo $regUrl ?>" class="btn-register <?php echo $past ? 's-disabled' : '' ?>"><?php echo $past ? 'EXPIRED EVENT' : 'REGISTER FOR THE EVENT' ?></a>
+						<?php endif ; ?>
 						<div class="share">
 							<p>SHARE</p>
 							<ul class="social">
-								<li><a href=""><?php get_template_part( 'svg-template/svg', 'share-facebook' ) ?></a></li>
-								<li><a href=""><?php get_template_part( 'svg-template/svg', 'share-linkedin' ) ?></a></li>
-								<li><a href=""><?php get_template_part( 'svg-template/svg', 'share-twitter' ) ?></a></li>
-								<li><a href=""><?php get_template_part( 'svg-template/svg', 'share-email' ) ?></a></li>
+								<li><a href="https://www.facebook.com/sharer.php?u=<?php echo get_the_permalink() ?>"><?php get_template_part( 'svg-template/svg', 'share-facebook' ) ?></a></li>
+								<li><a href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo get_the_permalink() ?>"><?php get_template_part( 'svg-template/svg', 'share-linkedin' ) ?></a></li>
+								<li><a href="https://twitter.com/intent/tweet?url=<?php echo get_the_permalink() ?>"><?php get_template_part( 'svg-template/svg', 'share-twitter' ) ?></a></li>
+								<!-- <li><a href=""><?php get_template_part( 'svg-template/svg', 'share-email' ) ?></a></li> -->
 							</ul>
 						</div>
 					</div>

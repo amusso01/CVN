@@ -18,7 +18,7 @@ $resourcesFooter =get_field('footer_resources');
 
 <script>
   // get url of rest api of guidelines page
-let pageGuidelinesUrl = '<?php echo site_url( 'wp-json/wp/v2/pages/25' ) ;?>'
+let pageGuidelinesUrl = '<?php echo site_url( '/wp-json/wp/v2/pages/25' ) ;?>'
 
 function acfSearch() {
     return {
@@ -70,7 +70,7 @@ function acfSearch() {
         if(el == "gui"){
           this.guidelines.forEach( guideline => {
   
-         
+        
             if(guideline.main_title.toLowerCase().includes(this.search.toLowerCase())){
               
               this.searchable.push(guideline)
@@ -152,7 +152,9 @@ function acfSearch() {
       },
 
       highlightSearch(s) {
+        
       if (this.search === '') return s;
+
       return s.replaceAll(
           new RegExp(`(${this.search.toLowerCase()})`, 'ig'),
           '<strong class="search-hightligh">$1</strong>'
@@ -181,6 +183,7 @@ function acfSearch() {
   <div class="page-gr-content">
     <div x-data="acfSearch()"  class="content-block__small">
 
+      <!-- SEARCH LOADER -->
       <div class="search-curtains"  x-show="isLoading">
         <iframe src="https://giphy.com/embed/5AtXMjjrTMwvK" width="90" height="90" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
       </div>
