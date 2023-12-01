@@ -44,10 +44,11 @@ get_header();
 
 		}
 
-	// debug($today);
-	// debug(strtotime($endArray[2].$endArray[1].$endArray[0]));
-	// debug(strtotime($today));
-	// dd($past)
+	debug($today);
+	debug(strtotime($endArray[2].$endArray[1].$endArray[0]));
+	debug($endArray[2].$endArray[1].$endArray[0]);
+	debug(strtotime($today));
+	dd($past)
 
 	?>
 
@@ -62,7 +63,7 @@ get_header();
 						<h4><?php echo get_the_title() ?></h4>
 					</div>
 
-					<div class="event-date <?php echo $past ? 's-disabled' : '' ?>">
+					<div class="event-date <?php echo $past ? '' : 's-disabled' ?>">
 						<p class="month">
 							<?php echo $Month ?>
 						</p>
@@ -82,7 +83,7 @@ get_header();
 					</div>
 					<div class="right">
 						<?php if($regUrl) : ?>
-						<a href="<?php echo $regUrl ?>" class="btn-register <?php echo $past ? 's-disabled' : '' ?>"><?php echo $past ? 'EXPIRED EVENT' : 'REGISTER FOR THE EVENT' ?></a>
+						<a href="<?php echo $regUrl ?>" class="btn-register <?php echo $past ? '' : 's-disabled' ?>"><?php echo $past ? 'REGISTER FOR THE EVENT' : 'EXPIRED EVENT' ?></a>
 						<?php endif ; ?>
 						<div class="share">
 							<p>SHARE</p>
