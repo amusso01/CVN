@@ -10,27 +10,37 @@
 get_header();
 ?>
 	<?php 
-		$today = current_time('Ymd');
+		$today = current_time('Y-M-d');
     $startDate = get_field('start_date');
     $endDate = get_field('end_date');
+
     $hasMultidate = get_field('is_a_multiple_date_event');
     $location = get_field('location');
     $regUrl = get_field('registration_url');
 
+
+		
+
     $endArray = explode( ',' , $endDate);
     $endMonth = $endArray[0];
     $endDay = $endArray[1];
+    $endYear = $endArray[2];
 
-    $Day = $endDay;
-    $Month = $endMonth;
+    $Day = trim($endDay);
+    $Month = trim($endMonth);
+    $Year = trim($endYear);
+
+		$endDateFormatted = $Year.'-'.$Month.'-'.$Day;
 
 		$past = false;
+
 
 
     if($hasMultidate){
       $startArray = explode( ',' , $startDate);
       $startMonth = $startArray[0];
       $startDay = $startArray[1];
+			$startYear = $startArray[2];
 
       $Day = $startDay.'-'. $endDay;
       if($startMonth !== $endMonth){
@@ -38,17 +48,21 @@ get_header();
       }
     }
 
-		if( strtotime($endArray[2].$endArray[1].$endArray[0]) >= strtotime($today) ) {
+		if( strtotime($endDateFormatted) >= strtotime($today) ) {
 
 				$past = true;
 
 		}
 
-	debug($today);
-	debug(strtotime($endArray[2].$endArray[1].$endArray[0]));
-	debug($endArray[2].$endArray[1].$endArray[0]);
-	debug(strtotime($today));
-	dd($past)
+	// debug($today);
+	// debug(strtotime($today));
+
+	// debug($endDate);
+	// debug($endDateFormatted);
+	// debug(strtotime($endDateFormatted));
+
+
+	// debug($past);
 
 	?>
 
